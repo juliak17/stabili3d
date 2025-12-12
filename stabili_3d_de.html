@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>stabili – Ergonomischer Löffel</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+ body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   background: #f5f7fa;
+   color: #1e2a35;
+   line-height: 1.8;
+ }
+ h2 {
+   font-size: 2rem;
+   color: #203a57;
+   margin-bottom: 10px;
+ }
+ p, li {
+   font-size: 1.1rem;
+ }
+ header {
+   text-align: center;
+   padding: 50px 20px;
+   background: #203a57;
+   color: white;
+ }
+ header img {
+   width: 150px;
+   margin-bottom: 10px;
+ }
+ .section {
+   max-width: 1100px;
+   margin: auto;
+   padding: 50px 25px;
+ }
+ .card {
+   background: white;
+   padding: 28px;
+   border-radius: 18px;
+   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+   margin-bottom: 30px;
+ }
+ .btn {
+   background: #203a57;
+   color: white;
+   padding: 14px 26px;
+   border-radius: 10px;
+   display: inline-block;
+   cursor: pointer;
+   text-decoration: none;
+   animation: pulse 1.8s infinite;
+ }
+ .btn:hover {
+   background: #1a2f4a;
+ }
+ ul { padding-left: 20px; }
+ .carousel-wrapper{ max-width:800px; margin:auto; }
+ .carousel-img{ width:100%; border-radius:16px; box-shadow:0 4px 14px rgba(0,0,0,0.15); }
+
+@keyframes pulse {
+ 0% { transform: scale(1); }
+ 50% { transform: scale(1.06); }
+ 100% { transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <img src="logo.png" alt="Logo" />
+ <h1>Mehr Stabilität. Mehr Kontrolle. Mehr Lebensqualität.</h1>
+</header>
+
+<section class="section card">
+ <h2>Warum stabili?</h2>
+ <p>Der individuell gefertigte stabili-Löffel wurde speziell für Menschen entwickelt, deren Handkraft, Motorik und Sensibilität eingeschränkt ist.</p>
+ <p>Mit modernster 3D-Technologie wird jeder Griff exakt an die Handform angepasst. Das Ergebnis: Ein sicherer Halt, weniger Verschütten und ein deutlich entspannteres Esserlebnis.</p>
+
+ <h3>Vorteile</h3>
+ <ul>
+   <li>Stabile Handhaltung – das integrierte Stützelement stabilisiert das Handgewölbe und verhindert das Einknicken</li>
+   <li>Sicherer, rutschfester Griff – ergonomische Form erleichtert das Greifen auch bei schwacher Kraft</li>
+   <li>Kontrollierte Bewegung – ruhige, geführte Löffelbewegung reduziert Verschütten</li>
+   <li>Mehr Selbstständigkeit – Essen wieder ohne Frust und Scham genießen</li>
+   <li>Rehabilitation fördern – aktiviert Muskulatur & unterstützt Neuroplastizität</li>
+ </ul>
+</section>
+
+<section class="section card">
+ <h2>Für wen eignet sich stabili?</h2>
+ <p>Der stabili-Löffel eignet sich besonders für Menschen mit neurologischen Erkrankungen wie z. B. Schlaganfall oder Gehirnblutung.</p>
+ <h3>Mögliche Einschränkungen:</h3>
+ <ul>
+   <li>Geschwächte Handkraft</li>
+   <li>Handfehlstellungen</li>
+   <li>Reduzierte Sensibilität</li>
+   <li>Störungen der Feinmotorik</li>
+ </ul>
+</section>
+
+<section class="section card">
+ <h2>Individuell. Hygienisch. Alltagstauglich.</h2>
+ <ul>
+   <li>Foto der Hand für perfekte Passform</li>
+   <li>In verschiedenen Farben verfügbar</li>
+   <li>Leichte Reinigung</li>
+   <li>Kostenfreie Anpassung</li>
+   <li>Zwei Jahre Garantie</li>
+ </ul>
+</section>
+
+<section class="section">
+ <h2><i class="fa-solid fa-users icon"></i>stabili in Aktion</h2>
+ <div class="carousel-wrapper">
+   <img id="carouselImg" class="carousel-img" src="swerbung1.png">
+ </div>
+</section>
+
+<section class="section card">
+ <h2><i class="fa-solid fa-gears icon"></i>Produktkonfigurator</h2>
+
+ <div class="card">
+   <h3>1. Löffeltyp auswählen</h3>
+   <div style="display:flex; gap:30px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:260px; text-align:center;">
+         <img src="loeffel1.png" style="width:100%; max-width:250px; border-radius:12px;">
+         <p><strong>Typ A – ergonomischer Stützgriff</strong></p>
+         <div class="btn" onclick="selectModel('A')">Auswählen</div>
+      </div>
+
+      <div style="flex:1; min-width:260px; text-align:center;">
+         <img src="loeffel2.png" style="width:100%; max-width:250px; border-radius:12px;">
+         <p><strong>Typ B – kompakter Griff</strong></p>
+         <div class="btn" onclick="selectModel('B')">Auswählen</div>
+      </div>
+   </div>
+ </div>
+
+ <div class="card">
+   <h3>2. Farbe auswählen</h3>
+   <div style="display:flex; gap:15px; align-items:center;">
+
+     <div class="color-dot"
+          style="background:#c0bdb4; width:40px;height:40px;border-radius:50%;"
+          onclick="selectColor('#c0bdb4')"></div>
+
+     <div class="color-dot"
+          style="background:#8e8e8e; width:40px;height:40px;border-radius:50%;"
+          onclick="selectColor('#8e8e8e')"></div>
+
+     <div class="color-dot"
+          style="background:#3a4e6a; width:40px;height:40px;border-radius:50%;"
+          onclick="selectColor('#3a4e6a')"></div>
+
+     <div class="color-dot"
+          style="background:#d4c49e; width:40px;height:40px;border-radius:50%;"
+          onclick="selectColor('#d4c49e')"></div>
+
+     <span id="colorLabel">Keine Farbe gewählt</span>
+   </div>
+ </div>
+
+ <div class="card">
+   <h3>3. Foto der Hand hochladen</h3>
+   <input type="file" id="handUpload" accept="image/*" onchange="previewHand(event)">
+   <br><br>
+   <img id="handPreview" style="max-width:300px; border-radius:12px; display:none;">
+ </div>
+
+ <div class="card" style="text-align:center;">
+   <h3>4. Vorschau Ihres Löffels</h3>
+   <div id="productWrap"
+        style="border-radius:12px; background:transparent; display:inline-block;">
+      <img id="productPreview"
+           style="display:none; width:260px; border-radius:12px;">
+   </div>
+ </div>
+
+ <div class="card" style="text-align:center;">
+   <div class="btn">Jetzt Konfiguration abschicken</div>
+ </div>
+
+</section>
+
+<footer style="text-align:center; padding:40px; background:#203a57; color:white;">
+ „Weil selbstständiges Essen ein Stück Würde bedeutet.“
+</footer>
+
+<section class="section card" style="margin-top:40px; text-align:center;">
+ <h2>Team</h2>
+ <p>Jana Brütting, Elena Hildebrandt, Johanna Nagel, Julia Kraus</p>
+ <p>Unser interdisziplinäres Team aus Therapeutinnen,
+    Gesundheitswissenschaftlerinnen und Marketingexpertinnen arbeitet gemeinsam daran,
+    funktionale und ästhetische Alltagshilfen zu entwickeln.</p>
+</section>
+
+<section class="section card" style="margin-top:40px;">
+ <h2>Impressum</h2>
+ <p>Stabili – Ergonomische Handassistenzprodukte<br>
+ Max-Mustermann-Straße 11<br>
+ 80801 München<br>
+ Telefon: 089/000000<br>
+ E-Mail: info@stabili.de</p>
+</section>
+
+<script>
+let selectedModel = null;
+let selectedColor = null;
+
+function selectModel(type){
+ selectedModel = type;
+ updatePreview();
+}
+
+function selectColor(color){
+ selectedColor = color;
+ document.getElementById('colorLabel').textContent = 'Farbe: ' + color;
+ updatePreview();
+}
+
+function previewHand(e){
+ const file = e.target.files[0];
+ if(!file) return;
+ const img = document.getElementById('handPreview');
+ img.src = URL.createObjectURL(file);
+ img.style.display = 'block';
+}
+
+function updatePreview(){
+ const img = document.getElementById('productPreview');
+ const wrap = document.getElementById('productWrap');
+
+ if(!selectedModel){
+   img.style.display = 'none';
+   return;
+ }
+
+ img.src = selectedModel === 'A'
+     ? 'loeffel1.png'
+     : 'loeffel2.png';
+
+ img.style.display = 'block';
+ wrap.style.background = selectedColor ? selectedColor : 'transparent';
+}
+
+// Bilderkarussell – automatisch rotierend
+const pics = [
+ 'swerbung1.png',
+ 'swerbung2.png',
+ 'swerbung3.png',
+ 'loeffel_bsp2.png'
+];
+
+let idx = 0;
+setInterval(()=>{
+ idx = (idx + 1) % pics.length;
+ const img = document.getElementById('carouselImg');
+ img.src = pics[idx];
+ img.style.width = '500px';
+ img.style.height = 'auto';
+
+}, 1500);
+</script>
+
+</body>
+</html>
